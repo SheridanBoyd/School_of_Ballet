@@ -74,30 +74,42 @@ body {
     float: left;
 }
 
-#navbar a{
+/* #navbar a{
     display:block;
     color: #000000;
     text-decoration: none;
     padding: 8px;
-    background-color: #dddddd;
+    background-color: #dddddd; */
 
     /* border-style: solid;
     border-color: aliceblue;
     border-width: 3px; */
-}
+/* }
 
 #navbar a:hover{
     color: #dddddd;
     background-color: #050505;
+} */
+#navbar a {
+    display: block;
+    color: #dddddd;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #000000;
 }
 
+#navbar a:hover {
+    color: #000000;
+    background-color: #dddddd;
+}
 #hiddenheader {
     min-height: 110px;
     margin: 0px;
 }
 
 #hiddenstage {
-    min-height: 500px
+    min-height: 500px;
+    /* background-color: #eeeeee */
 }
 
 #logo {
@@ -130,6 +142,7 @@ body {
 
 #beginner {
     margin-top: 70px;
+    background-color: #000000
 }
 
 /* #medium {
@@ -150,7 +163,7 @@ body {
 
 .ldiv{
     /* position: absolute; */
-    /* background-color:#2196F3; */
+    background-color:#2196F3;
   /* padding:20px; */
   float:left;
   width:48.2%;
@@ -163,7 +176,7 @@ body {
 
 .rdiv{
     /* position: absolute; */
-    /* background-color:#4CAF50; */
+    background-color:#4CAF50;
     /* padding:20px; */
     float:right;
     width:48.2%; 
@@ -177,7 +190,7 @@ body {
 .rimage{
     /* position: absolute; */
     height: 300px;
-    /* background-color:#4CAF50; */
+    background-color:rgb(92, 240, 97);
     padding-right: 20%;
     /* padding:20px; */
     float:right;
@@ -186,7 +199,7 @@ body {
 .limage{
     /* position: absolute; */
     height: 300px;
-    /* background-color:#2196F3; */
+    background-color:rgb(80, 169, 241);
     padding-left: 20%;
   /* padding:20px; */
     float:left;

@@ -3,7 +3,29 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	 crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcCDlFrEKMKcV92s4vDN3Cwd28ujvuniQ&callback=initMap">
+	</script>
+	<script>
+		function initMap() {
+			// The location of Uluru
+			var hall = { lat: -41.220630, lng: 174.918441 };
+			// The map, centered at Uluru
+			var map = new google.maps.Map(
+				document.getElementById('map'), { zoom: 15, center: hall });
+			// The marker, positioned at Uluru
+			var marker = new google.maps.Marker({ position: hall, map: map });
+		}
+	</script>
 	<script>
 		function checkvalid() {
 			console.log('it works')
@@ -38,11 +60,34 @@
 			isValid()
 		})
 	</script>
+	<style>
+		#map {
+			float: right;
+			top: 0px;
+			right: 0px;
+			height: 400px;
+			/* The height is 400 pixels */
+			width: 400px;
+			/* The width is the width of the web page */
+			margin-top: 40px;
+			margin-right: 50px
+		}
+
+		#submit {
+			display: block;
+			color: #dddddd;
+			text-decoration: none;
+			padding: 8px;
+			background-color: #000000;
+			border-radius: 15px;
+			height: 50px;
+		}
+	</style>
 </head>
 
 <body>
 	<div id="header">
-		<img src='Images/_logo.png' id='logo' />
+		<img src='Images/_logo2.png' id='logo' />
 		<nav id='navbar'>
 			<ul>
 				<li>
@@ -58,26 +103,30 @@
 		</nav>
 	</div>
 	<div id='hiddenheader'></div>
-	<br/>
-	<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
-		<em><h2 style="font-family: Lora; font-size: 40px;">Send an email</h2></em>
-		<p>
-			<input type="text" style="font-size:25px;" name="name" placeholder="Your Name" />
-		</p>
-		<p>
-			<input type="text" style="font-size:25px;" name="email" id='email' placeholder="Your Email Address" />
-			<span id='valid'>Sorry, This is not a valid email</span>
-		</p>
-		<p>
-			<textarea style="font-size:20px;" cols="24" rows="15" name="message" placeholder="Your Message Here"></textarea>
-		</p>
-		<p>
-			<input type="submit" style="font-size:40px;" name="submit" value="Send" id='submit' />
-			<input type="reset" style="font-size:40px;" name="reset" value="Clear Form" />
-		</p>
-	</form>
-	<h1>Contact Info</h1>
+
+	<div id="map"></div>
+	<div class="form">
+		<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
+			<em>
+				<h2 style="font-family: Lora; font-size: 40px;">Send an email</h2>
+			</em>
+			<p>
+				<input type="text" style="font-size:25px;" name="name" placeholder="Your Name" />
+			</p>
+			<p>
+				<input type="text" style="font-size:25px;" name="email" id='email' placeholder="Your Email Address" />
+				<span id='valid'>Sorry, This is not a valid email</span>
+			</p>
+			<p>
+				<textarea style="font-size:20px;" cols="27" rows="15" name="message" placeholder="Your Message Here"></textarea>
+			</p>
+			<p>
+				<input type="submit" style="font-size:20px;" name="submit" value="Send" id='submit' />
+			</p>
+		</form>
+	</div>
 	<div id='contacts'>
+		<h1>Contact Info</h1>
 		<p>Phone: 04-566 2537</p>
 		<p>Address: 76 Waiwhetu Rd, Waterloo, Lower Hutt 5010</p>
 	</div>

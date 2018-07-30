@@ -4,7 +4,6 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script type='text/javascript' src="node_modules/rellax/rellax.js"></script>
 	<script type='text/javascript' src="node_modules/rellax/rellax.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
@@ -18,29 +17,21 @@
 		})
 	</script>
 	<style>
-		body {
-			background-image: url(Images/stage.jpg);
-		}
-
-		#navbar a {
-			display: block;
-			color: #dddddd;
-			text-decoration: none;
-			padding: 8px;
-			background-color: #000000;
-		}
-
-		#navbar a:hover {
-			color: #000000;
-			background-color: #dddddd;
-		}
-
-		.rellax p{
+		.rellax p {
 			font-family: 'Lora', serif;
 			font-size: 50px;
 			color: #dddddd
 		}
 	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+	 crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	 crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -63,25 +54,31 @@
 	<img src="Images/_stage.jpg" id='stage' />
 	</div> -->
 	<div>
+		<span style="position:absolute; top: 135px; left: 0px;" class='rellax' data-rellax-zindex="-100">
+			<img src="Images/_stage.jpg" id='stage' />
+		</span>
 		<span style="position:absolute; left: 10%;" class="rellax" data-rellax-zindex="-50" data-rellax-speed="-4.5">
 			<img src="Images/_sheridan.png" id='boy' />
 		</span>
 		<span style="position:absolute; top: 155px;left: 40%;" class="rellax" data-rellax-zindex="-50" data-rellax-speed="-8">
-			<p style="color: #dddddd;"><em>Learn</em></p>
+			<p style="color: #dddddd;">
+				<em>Learn</em>
+			</p>
 		</span>
 		<span style="position:absolute; top: 255px;left: 40%;" class="rellax" data-rellax-zindex="-50" data-rellax-speed="-6.5">
-			<p style="color: #dddddd;"><em>Have Fun</em></p>
+			<p style="color: #dddddd;">
+				<em>Have Fun</em>
+			</p>
 		</span>
 		<span style="position:absolute; top: 355px;left: 40%;" class="rellax" data-rellax-zindex="-50" data-rellax-speed="-5">
-			<p style="color: #dddddd;"><em>Express Yourself</em></p>
-		</span>
-		<span style="position:absolute; top: 135px; left: 0px;" class='rellax' data-rellax-zindex="-55">
-			<img src="Images/_stage.jpg" id='stage' />
+			<p style="color: #dddddd;">
+				<em>Express Yourself</em>
+			</p>
 		</span>
 	</div>
 
 	<div id='hiddenstage'></div>
-	<div id='beginner'>
+	<div id='beginner' >
 		<div class='ldiv'>
 			<h2>Beginners</h2>
 			<p>With beginers around the age of 5-7, we teach Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget nisl
@@ -94,10 +91,10 @@
 	</div>
 	<div id='medium'>
 		<div class='rdiv'>
-			<h2>Medium</h2>
-			<p>With medium around the age of 8-12, we teach Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget nisl libero.
-				Phasellus sit amet eleifend nisl. Ut eleifend ac mauris et bibendum. Suspendisse orci risus, posuere et ex vel, finibus
-				convallis sapien. Donec a sem viverra, pulvinar tellus non. </p>
+			<h2>Intermediate</h2>
+			<p>With intermediate around the age of 8-12, we teach Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
+				nisl libero. Phasellus sit amet eleifend nisl. Ut eleifend ac mauris et bibendum. Suspendisse orci risus, posuere et
+				ex vel, finibus convallis sapien. Donec a sem viverra, pulvinar tellus non. </p>
 		</div>
 		<div class='ldiv'>
 			<img src="Images/_middle.png" class='limage'>
