@@ -42,33 +42,45 @@
 
 <body>
 	<div id="header">
-		<img src='Images/logo.png' id='logo' />
-		<div id='navbar'>
-			<a href='index.html'>Home</a>
-			<a href="gallery.html">Gallery</a>
-			<a href="contact.html">Contact Us</a>
-		</div>
+		<img src='Images/_logo.png' id='logo' />
+		<nav id='navbar'>
+			<ul>
+				<li>
+					<a href='index.html'>Home</a>
+				</li>
+				<li>
+					<a href="gallery.html">Gallery</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact Us</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 	<div id='hiddenheader'></div>
 	<br/>
 	<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
-		<h2>Send and email</h2>
-		<p>Name:
-			<input type="text" name="name" />
-		</p>
-		<p>Email:
-			<input type="text" name="email" id='email' />
-			<span id='valid'>Sorry, This is not a valid email</span>
-		</p>
-		<p>Message:
-			<br />
-			<textarea cols="30" rows="20" name="message"></textarea>
+		<em><h2 style="font-family: Lora; font-size: 40px;">Send an email</h2></em>
+		<p>
+			<input type="text" style="font-size:25px;" name="name" placeholder="Your Name" />
 		</p>
 		<p>
-			<input type="submit" name="submit" value="Send" id='submit' />
-			<input type="reset" name="reset" value="Clear Form" />
+			<input type="text" style="font-size:25px;" name="email" id='email' placeholder="Your Email Address" />
+			<span id='valid'>Sorry, This is not a valid email</span>
+		</p>
+		<p>
+			<textarea style="font-size:20px;" cols="24" rows="15" name="message" placeholder="Your Message Here"></textarea>
+		</p>
+		<p>
+			<input type="submit" style="font-size:40px;" name="submit" value="Send" id='submit' />
+			<input type="reset" style="font-size:40px;" name="reset" value="Clear Form" />
 		</p>
 	</form>
+	<h1>Contact Info</h1>
+	<div id='contacts'>
+		<p>Phone: 04-566 2537</p>
+		<p>Address: 76 Waiwhetu Rd, Waterloo, Lower Hutt 5010</p>
+	</div>
 	<!--<form>
 		Name
 		<input type='text'/>
@@ -81,8 +93,6 @@
 		<br/>
 		<input type='submit'/>
 	</form> -->
-	<h1>contact.html</h1>
-	<p>Contact Page!</p>
 </body>
 
 </html>
