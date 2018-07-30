@@ -1,28 +1,31 @@
-/*this is just random css for now*/
-p {
-    background-color: rgb(60, 255, 0);
-}
+
 
 body {
-    background-image: url("Images/background.jpeg");
-    background-color: #000000;
+    background-color: #646464;
+    background-image: url(Images/stage.jpg);
 }
 
 #display{
     position: fixed;
-    left: 50%;
     top: 150px;
-    margin-left: -5%;
+    width: 100%;
+    text-align: center;
+    /*background-color: darkblue;*/
 }
 
 #display img {
     filter: drop-shadow(16px 16px 5px rgb(0, 0, 0));
     border-radius: 15%;
-    max-height: 200px
+    max-height: 200px;
 }
 
 #gallery {
     margin-top: 200px;
+}
+
+#gallery img {
+    border-radius: 15%;
+    max-height: 200px
 }
 
 #header {
@@ -47,4 +50,23 @@ body {
 
 #logo {
     max-height: 100px;
+}
+
+#scene div{
+    left:0px;
+    right: 0px
+}
+
+#stage {
+    text-align: center;
+}
+
+
+#boy {
+    text-align: center;
+    margin-top: 20%;
+}
+
+#valid  {
+    color:red;
 }

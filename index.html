@@ -3,9 +3,29 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene);
+			//var parallax = $('#parallex').html()
+			//var parallaxInstance = new Parallax(parallax)
+		})
+	</script>
 </head>
 
 <body>
+	<div id='hiddenheader'></div>
+	<div id="scene">
+		<div data-depth="0.2" id='stage'>
+			<img src="Images/stage.jpg" />
+		</div>
+		<div data-depth="0.6" id='boy'>
+			<img src="Images/sheridan.png" />
+		</div>
+	</div>
 	<div id="header">
 		<img src='Images/logo.png' id='logo' />
 		<div id='navbar'>
@@ -14,7 +34,6 @@
 			<a href="contact.html">Contact Us</a>
 		</div>
 	</div>
-	<div id='hiddenheader'></div>
 	<h1>index.html</h1>
 	<p>Index Page!</p>
 </body>

@@ -3,6 +3,41 @@
 
 <head>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script>
+		function checkvalid() {
+			console.log('it works')
+			email = $('#email').val();
+			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if (re.test(String(email).toLowerCase())) {
+				$('#valid').hide()
+				return true
+			}
+			else {
+				$('#valid').show()
+				return false
+			}
+		}
+		function validate() {
+			$('#email').keyup(checkvalid)
+		}
+		function isValid() {
+			$('#submit').click(function (event, that) {
+				console.log('hi?', checkvalid())
+				if (checkvalid()) {
+					console.log('ohgoghg horay')
+				}
+				else {
+					event.preventDefault()
+					alert('Sorry, your email is not valid')
+				}
+			})
+		}
+		$(document).ready(function () {
+			validate()
+			isValid()
+		})
+	</script>
 </head>
 
 <body>
@@ -15,6 +50,37 @@
 		</div>
 	</div>
 	<div id='hiddenheader'></div>
+	<br/>
+	<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
+		<h2>Send and email</h2>
+		<p>Name:
+			<input type="text" name="name" />
+		</p>
+		<p>Email:
+			<input type="text" name="email" id='email' />
+			<span id='valid'>Sorry, This is not a valid email</span>
+		</p>
+		<p>Message:
+			<br />
+			<textarea cols="30" rows="20" name="message"></textarea>
+		</p>
+		<p>
+			<input type="submit" name="submit" value="Send" id='submit' />
+			<input type="reset" name="reset" value="Clear Form" />
+		</p>
+	</form>
+	<!--<form>
+		Name
+		<input type='text'/>
+		<br/>
+		Your Email
+		<input type='text'/>
+		<br/>
+		Message
+		<input type='text'/>
+		<br/>
+		<input type='submit'/>
+	</form> -->
 	<h1>contact.html</h1>
 	<p>Contact Page!</p>
 </body>
