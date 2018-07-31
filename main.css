@@ -103,7 +103,7 @@ body {
     background-color: #dddddd;
 }
 #hiddenheader {
-    min-height: 110px;
+    min-height: 130px;
     margin: 0px;
 }
 
@@ -119,13 +119,13 @@ body {
 
 #stage {
     text-align: center;
-    max-height: 500px;
+    height: 500px;
+    width: 100%;
     margin: 0%;
-    width: 100%
 }
 
 #boy {
-    margin-top: 5%;
+    margin-top: 10px;
     width: 50%;
 }
 #text {
@@ -140,71 +140,25 @@ body {
     color:red;
 }
 
-#beginner {
-    margin-top: 70px;
-    background-color: #000000
+.startimage {
+    height: 300px;
 }
 
-/* #medium {
-    background-color: hotpink
-}
-
-#senior {
-    background-color: indigo
-}
-
-#fees {
-    margin-top: 1700px;
-}
-
-#times {
-    margin-top: 2100px;
+/* #firstone {
+    background-color: #eeeeee;
+    z-index: 2400;
 } */
 
-.ldiv{
-    /* position: absolute; */
-    background-color:#2196F3;
-  /* padding:20px; */
-  float:left;
-  width:48.2%;
-  height: 300px;
-  /* border-bottom: solid;
-  border-color: #2e2e2e;
-  border-width: 5px; */
-  margin-top: 30px;
+@media (max-width: 575.98px) { 
+    .rellax p {
+        font-family: 'Lora', serif;
+        font-size: 30px;
+        color: #dddddd
+    }
 }
 
-.rdiv{
-    /* position: absolute; */
-    background-color:#4CAF50;
-    /* padding:20px; */
-    float:right;
-    width:48.2%; 
-    height: 300px;
-    /* border-bottom: solid;
-    border-color: #2e2e2e;
-    border-width: 5px; */
-    margin-top: 30px;
+h1, h2{
+    font-family: Lora;
+    font-size: 40px;
+    font-style: italic;
 }
-
-.rimage{
-    /* position: absolute; */
-    height: 300px;
-    background-color:rgb(92, 240, 97);
-    padding-right: 20%;
-    /* padding:20px; */
-    float:right;
-}
-
-.limage{
-    /* position: absolute; */
-    height: 300px;
-    background-color:rgb(80, 169, 241);
-    padding-left: 20%;
-  /* padding:20px; */
-    float:left;
-}
-
- .ldiv, rdiv, .limage, .rimage{
-    box-sizing:border-box;
-  }

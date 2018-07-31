@@ -2,19 +2,13 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
-
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
 	 crossorigin="anonymous">
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-	 crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcCDlFrEKMKcV92s4vDN3Cwd28ujvuniQ&callback=initMap">
-	</script>
 	<script>
 		function initMap() {
 			// The location of Uluru
@@ -27,26 +21,26 @@
 		}
 	</script>
 	<script>
-		function checkvalid() {
+		function validate() {
 			console.log('it works')
 			email = $('#email').val();
 			var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 			if (re.test(String(email).toLowerCase())) {
-				$('#valid').hide()
 				return true
 			}
 			else {
-				$('#valid').show()
 				return false
 			}
 		}
-		function validate() {
-			$('#email').keyup(checkvalid)
-		}
-		function isValid() {
+		// 		// $('#valid').show()
+		// 		// $('#valid').hide()
+		// function isValid() {
+		// 	$('#email').update(validate)
+		// }
+		function canSend() {
 			$('#submit').click(function (event, that) {
-				console.log('hi?', checkvalid())
-				if (checkvalid()) {
+				console.log('hi?', validate())
+				if (validate()) {
 					console.log('ohgoghg horay')
 				}
 				else {
@@ -56,21 +50,22 @@
 			})
 		}
 		$(document).ready(function () {
-			validate()
-			isValid()
+			// $('#valid').hide()
+			canSend()
 		})
 	</script>
 	<style>
 		#map {
-			float: right;
-			top: 0px;
-			right: 0px;
+			/* float: right; */
+			/* top: 0px; */
+			/* right: 0px; */
 			height: 400px;
-			/* The height is 400 pixels */
+			/* The heiht is 400 pixels */
 			width: 400px;
 			/* The width is the width of the web page */
-			margin-top: 40px;
-			margin-right: 50px
+			/* margin-top: 40px;
+			margin-right: 50px */
+			background-color: aqua;
 		}
 
 		#submit {
@@ -86,7 +81,7 @@
 </head>
 
 <body>
-	<div id="header">
+	<div style="z-index: 2000;" id="header">
 		<img src='Images/_logo2.png' id='logo' />
 		<nav id='navbar'>
 			<ul>
@@ -103,32 +98,34 @@
 		</nav>
 	</div>
 	<div id='hiddenheader'></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1>Contact Info</h1>
+				<p>Phone: 04-566 2537</p>
+				<p>Address: 76 Waiwhetu Rd, Waterloo, Lower Hutt 5010</p>
 
-	<div id="map"></div>
-	<div class="form">
-		<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
-			<em>
-				<h2 style="font-family: Lora; font-size: 40px;">Send an email</h2>
-			</em>
-			<p>
-				<input type="text" style="font-size:25px;" name="name" placeholder="Your Name" />
-			</p>
-			<p>
-				<input type="text" style="font-size:25px;" name="email" id='email' placeholder="Your Email Address" />
-				<span id='valid'>Sorry, This is not a valid email</span>
-			</p>
-			<p>
-				<textarea style="font-size:20px;" cols="27" rows="15" name="message" placeholder="Your Message Here"></textarea>
-			</p>
-			<p>
-				<input type="submit" style="font-size:20px;" name="submit" value="Send" id='submit' />
-			</p>
-		</form>
-	</div>
-	<div id='contacts'>
-		<h1>Contact Info</h1>
-		<p>Phone: 04-566 2537</p>
-		<p>Address: 76 Waiwhetu Rd, Waterloo, Lower Hutt 5010</p>
+				<div class="col-md-2" id="map"></div>
+			</div>
+			<div class="col-md-6">
+				<form action="http://sheridan.pythonanywhere.com/" method="get" enctype="text/plain">
+					<h2 style="font-family: Lora; font-size: 40px;">Send an email</h2>
+					<p>
+						<input type="text" style="font-size:25px;" name="name" placeholder="Your Name" />
+					</p>
+					<p>
+						<input type="text" style="font-size:25px;" name="email" id='email' placeholder="Your Email Address" />
+						<!-- <p id='valid'>Sorry, This is not a valid email</p> -->
+					</p>
+					<p>
+						<textarea style="font-size:20px;" cols="27" rows="15" name="message" placeholder="Your Message Here"></textarea>
+					</p>
+					<p>
+						<input type="submit" style="font-size:20px;" name="submit" value="Send" id='submit' />
+					</p>
+				</form>
+			</div>
+		</div>
 	</div>
 	<!--<form>
 		Name
@@ -142,6 +139,14 @@
 		<br/>
 		<input type='submit'/>
 	</form> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+	 crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+	 crossorigin="anonymous"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcCDlFrEKMKcV92s4vDN3Cwd28ujvuniQ&callback=initMap"></script>
+
 </body>
 
 </html>
