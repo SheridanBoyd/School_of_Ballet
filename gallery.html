@@ -14,7 +14,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 	 crossorigin="anonymous"></script>
-	 <link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
@@ -31,6 +31,9 @@
 				<li>
 					<a href="contact.html">Contact Us</a>
 				</li>
+				<li style="color: red">
+					This is a work in progress!
+				</li>
 			</ul>
 		</nav>
 	</div>
@@ -39,25 +42,20 @@
 		<img id='imgdisplay' src="Images/Ballet 02 copy.jpg">
 	</div>
 	<div class="container" id='gallery'>
-		<div class="row">
-			<img src="Images/Ballet 02 copy.jpg">
-			<img src="Images/boys1.jpeg">
-			<img src="Images/boys2.jpeg">
-			<img src="Images/dance_of_rose_maidens.jpeg">
-			<img src="Images/dolls.jpeg" />
-			<img src="Images/match_girl.jpeg" />
-			<img src="Images/MG_4501 copy.jpg" />
-			<img src="Images/tiffany_spanish.jpeg" />
-			<img src="Images/Unknown-1 copy.jpeg" />
-			<img src="Images/Unknown-1.jpeg" />
-			<img src="Images/Unknown-2.jpeg" />
-			<img src="Images/Unknown-3.jpeg" />
-			<img src="Images/Unknown-4.jpeg" />
-			<img src="Images/Unknown-5.jpeg" />
-			<img src="Images/Unknown-6.jpeg" />
-			<img src="Images/Unknown-7.jpeg" />
+		<div class="row" id='gallerydisplay'>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function () {
+			for (i in [...Array(21).keys()]) {
+				var elem = document.createElement("img");
+				elem.src = `Images/Thumbnails/thumbnail${i}.jpeg`
+				elem.setAttribute("alt", "Flower");
+				document.getElementById("gallerydisplay").appendChild(elem);
+			}
+		})
+	</script>
 </body>
 
 </html>
