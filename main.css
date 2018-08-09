@@ -42,8 +42,8 @@ body {
 #display img {
     filter: drop-shadow(16px 16px 5px rgb(0, 0, 0));
     border-radius: 40px;
-    max-height: 600px;
-    max-width: 80%;
+    height: 600px;
+    /* max-width: 60%; */
 }
 
 #gallery {

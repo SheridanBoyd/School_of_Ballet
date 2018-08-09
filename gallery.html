@@ -3,7 +3,7 @@
 
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<!-- <script type="text/javascript" src="main.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
@@ -39,21 +39,37 @@
 	</div>
 	<div id='hiddenheader'></div>
 	<div id='display'>
-		<img id='imgdisplay' src="Images/Ballet 02 copy.jpg">
+		<img id='imgdisplay' src="Images/Display/display2.jpeg">
 	</div>
-	<div class="container" id='gallery'>
-		<div class="row" id='gallerydisplay'>
+	<div class="container">
+		<div class="row" id='gallery'>
 		</div>
 	</div>
 
 	<script>
+		function gallery() {
+			$('#gallery img').on('click', display)
+		};
+		function display(e) {
+			console.log('inside the thing')
+			target = $(this).attr('src');
+			number = target.split('l')[2].split('.')[0]
+			console.log(target, number)
+			$("#imgdisplay").attr('src',`Images/Display/display${number}.jpeg`);
+		};
 		$(document).ready(function () {
 			for (i in [...Array(21).keys()]) {
 				var elem = document.createElement("img");
 				elem.src = `Images/Thumbnails/thumbnail${i}.jpeg`
 				elem.setAttribute("alt", "Flower");
-				document.getElementById("gallerydisplay").appendChild(elem);
+				document.getElementById("gallery").appendChild(elem);
 			}
+
+			console.log('the document is ready')
+			gallery()
+
+			console.log('the document is also ready')
+
 		})
 	</script>
 </body>
