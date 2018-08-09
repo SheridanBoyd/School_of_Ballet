@@ -43,7 +43,7 @@ body {
     filter: drop-shadow(16px 16px 5px rgb(0, 0, 0));
     border-radius: 40px;
     height: 600px;
-    /* max-width: 60%; */
+    max-width: 100%;
 }
 
 #gallery {
@@ -53,6 +53,7 @@ body {
 #gallery img {
     border-radius: 15px;
     height: 200px;
+    max-width: 100%
 }
 
 #header {
@@ -116,24 +117,21 @@ body {
     max-height: 100px;
 }
 
-
-#stage {
-    text-align: center;
-    height: 500px;
-    width: 100%;
-    margin: 0%;
-}
-
 #boy {
-    margin-top: 10px;
-    width: 50%;
+    height: 300px;
+    
+    position: relative;
+    left:10%;
+    top: 70px;
+    /* top: 1000px; */
 }
-#text {
-    /* margin-top: 6%;
-    margin-left: 10%;
-    width: 25%;
-    text-align: center;
-    data-scalar-y: 20; */
+#word1, #word2, #word3 {
+    position: relative;
+    top:-200px;
+    left: 40%;
+	font-family: 'Lora', serif;
+	font-size: 50px;
+	color: #dddddd
 }
 
 #valid  {
@@ -144,17 +142,12 @@ body {
     height: 300px;
 }
 
-/* #firstone {
-    background-color: #eeeeee;
-    z-index: 2400;
-} */
-
-@media (max-width: 575.98px) { 
-    .rellax p {
-        font-family: 'Lora', serif;
-        font-size: 30px;
-        color: #dddddd
-    }
+#parallaxwork {
+    background-color: #971313;
+    background-image:url('Images/_stage.jpg');
+    background-size: 100% 500px;
+    height: 500px;
+    overflow: hidden;
 }
 
 h1, h2{
