@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
+	<title>Home</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
 
@@ -18,11 +18,11 @@
 
 <body>
 	<div style="z-index: 2000;" id="header">
-		<img src='Images/_logo2.png' id='logo' />
+		<img src='Images/_logo2.gif' id='logo' alt='logo'/>
 		<nav id='navbar'>
 			<ul>
 				<li>
-					<a href='index.html'>Home</a>
+					<a href='index.html' id='visited'>Home</a>
 				</li>
 				<li>
 					<a href="gallery.html">Gallery</a>
@@ -37,28 +37,8 @@
 		</nav>
 	</div>
 	<div id='hiddenheader'></div>
-	<!-- <div id="scene">
-		<div data-depth="0.2" id='stage'>
-			<img src="Images/_stage.jpg" id='stage' />
-		</div>
-		<div data-depth="0.6" id='boy'>
-			<img src="Images/_sheridan.png" id='boy' />
-		</div>
-		<div data-depth="0.6" id'text'>
-				<p style="color: #dddddd;">Be happy. Be healthy. Be alive.</p>
-		</div>
-	</div> -->
-	<!-- 
-	<div class="rellax" data-rellax-percentage="0.5">
-		<img src="Images/_sheridan.png" id='boy' />
-
-	<img src="Images/_stage.jpg" id='stage' />
-	</div> -->
 	<div id='parallaxwork'>
-		<!-- <div style="position: relative; left: 0px;">
-			<img src="Images/_stage.jpg" id='stage' />
-		</div> -->
-			<img src="Images/_sheridan.png" id='boy'/>
+			<img src="Images/_sheridan.png" id='boy' alt='jumping boy'/>
 			<p style="color: #dddddd;" id='word1'>
 				<em>Learn</em>
 			</p>
@@ -69,7 +49,6 @@
 				<em>Express Yourself</em>
 			</p>
 	</div>
-	<!-- <div id='hiddenstage'></div> -->
 	<div class="container" id="firstone" style="z-index: 5000;">
 		<div class="row">
 			<div class='col-12 col-md-8'>
@@ -79,16 +58,16 @@
 					finibus convallis sapien. Donec a sem viverra, pulvinar tellus non. </p>
 			</div>
 			<div class="col-6 col-md-4">
-				<img src="Images/_beginers.png" class='startimage'>
+				<img src="Images/_beginers.png" class='startimage' alt='Begginer dancer'>
 			</div>
 		</div>
 	</div>
 	<div class="container">
-		<div class="row">
-			<div class='col-6 col-md-4'>
-				<img src="Images/_middle.png" class='startimage'>
+		<div class="row thingy">
+			<div class='col-6 col-md-4 first'>
+				<img src="Images/_middle.png" class='startimage' alt='intermediate dancer'>
 			</div>
-			<div class='col-12 col-md-8'>
+			<div class='col-12 col-md-8 second'>
 				<h2>Intermediate</h2>
 				<p>With intermediate around the age of 8-12, we teach Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget
 					nisl libero. Phasellus sit amet eleifend nisl. Ut eleifend ac mauris et bibendum. Suspendisse orci risus, posuere et
@@ -105,10 +84,13 @@
 					finibus convallis sapien. Donec a sem viverra, pulvinar tellus non. </p>
 			</div>
 			<div class='col-6 col-md-4'>
-				<img src="Images/_senior.png" class='startimage'>
+				<img src="Images/_senior.png" class='startimage' alt='senior dancer'>
 			</div>
 		</div>
 	</div>
+	<p>Logo photo taken by Diane Thomson, Edited by Sheridan Boyd</p>
+	<p>Other silloetes from 123rf, Edited by Sheridan Boyd</p>
+	<p>Website made by Sheridan Boyd</p>
 	<script>
 		function simpleParallax(intensity, element) {
 			$(window).scroll(function () {
@@ -124,14 +106,6 @@
 			simpleParallax(1.8, $('#word3'))
 		})
 	</script>
-	<!-- <p style="color: #dddddd;">
-		Dolores Thomas School of Ballet welcomes anyone new between the age of 5 and (idk, 10?, but you can stay after you're 10?).
-		We teach a proper ballet syllabus, and we do exams and preformances at the end of the year. A decent amount of our students
-		get gold cross (best) in the exams. We do a big preformance in september (otr whenever) and then go to (3?) different rest
-		homes to preform there too, whcih makes people ahppy.
-	</p>
-	<h1>index.html</h1>
-	<p>Index Page!</p> -->
 </body>
 
 </html>

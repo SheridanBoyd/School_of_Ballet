@@ -1,6 +1,12 @@
 
-@media screen and (min-width:680px) {
+@media screen and (max-width:994px) {
+    .thingy {
+        display: flex;
+        flex-direction: column;
+    }
     
+    .thingy > .first {order: 2; } /* Will be displayed second */
+    .thingy > .second {order: 1; } /* Will be displayed first  */
 }
 body {
     background-color: #eeeeee;
@@ -75,22 +81,7 @@ body {
     float: left;
 }
 
-/* #navbar a{
-    display:block;
-    color: #000000;
-    text-decoration: none;
-    padding: 8px;
-    background-color: #dddddd; */
 
-    /* border-style: solid;
-    border-color: aliceblue;
-    border-width: 3px; */
-/* }
-
-#navbar a:hover{
-    color: #dddddd;
-    background-color: #050505;
-} */
 #navbar a {
     display: block;
     color: #dddddd;
@@ -103,6 +94,12 @@ body {
     color: #000000;
     background-color: #dddddd;
 }
+
+#navbar a#visited{
+    color: #000000;
+    background-color: #dddddd;
+}
+
 #hiddenheader {
     min-height: 130px;
     margin: 0px;
@@ -110,7 +107,6 @@ body {
 
 #hiddenstage {
     min-height: 500px;
-    /* background-color: #eeeeee */
 }
 
 #logo {
@@ -123,7 +119,6 @@ body {
     position: relative;
     left:10%;
     top: 70px;
-    /* top: 1000px; */
 }
 #word1, #word2, #word3 {
     position: relative;
@@ -155,3 +150,12 @@ h1, h2{
     font-size: 40px;
     font-style: italic;
 }
+
+iframe {
+    width: 400px;
+    height: 300px;
+    border: 0px;
+}
+
+
+

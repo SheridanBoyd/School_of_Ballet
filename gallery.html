@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 
 <head>
+	<title>Gallary</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<!-- <script type="text/javascript" src="main.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
@@ -19,14 +20,14 @@
 
 <body>
 	<div style="z-index: 2000;" id="header">
-		<img src='Images/_logo2.png' id='logo' />
+		<img src='Images/_logo2.gif' id='logo' alt='logo'/>
 		<nav id='navbar'>
 			<ul>
 				<li>
 					<a href='index.html'>Home</a>
 				</li>
 				<li>
-					<a href="gallery.html">Gallery</a>
+					<a href="gallery.html" id='visited'>Gallery</a>
 				</li>
 				<li>
 					<a href="contact.html">Contact Us</a>
@@ -39,13 +40,14 @@
 	</div>
 	<div id='hiddenheader'></div>
 	<div id='display'>
-		<img id='imgdisplay' src="Images/Display/display2.jpeg">
+		<img id='imgdisplay' src="Images/Display/display2.jpeg" alt='placeholder'>
 	</div>
 	<div class="container">
 		<div class="row" id='gallery'>
 		</div>
 	</div>
-
+	<p>Photos taken by Diane Thomson</p>
+	<p>Website made by Sheridan Boyd</p>
 	<script>
 		function gallery() {
 			$('#gallery img').on('click', display)
@@ -56,6 +58,7 @@
 			number = target.split('l')[2].split('.')[0]
 			console.log(target, number)
 			$("#imgdisplay").attr('src',`Images/Display/display${number}.jpeg`);
+			$("#imgdisplay").attr('alt',`Image #${number}`);
 		};
 		$(document).ready(function () {
 			for (i in [...Array(21).keys()]) {
