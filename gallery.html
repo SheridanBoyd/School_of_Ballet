@@ -20,7 +20,7 @@
 
 <body>
 	<div style="z-index: 2000;" id="header">
-		<img src='Images/_logo2.gif' id='logo' alt='logo'/>
+		<img src='Images/_logo2.gif' id='logo' alt='logo' />
 		<nav id='navbar'>
 			<ul>
 				<li>
@@ -43,11 +43,13 @@
 		<img id='imgdisplay' src="Images/Display/display2.jpeg" alt='placeholder'>
 	</div>
 	<div class="container">
-		<div class="row" id='gallery'>
+		<div class="row text-center" id='gallery'>
 		</div>
 	</div>
-	<p>Photos taken by Diane Thomson</p>
-	<p>Website made by Sheridan Boyd</p>
+	<div id='acknowledgements'>
+		<p>Photos taken by Diane Thomson, used with permission</p>
+		<p>Website made by Sheridan Boyd</p>
+	</div>
 	<script>
 		function gallery() {
 			$('#gallery img').on('click', display)
@@ -57,14 +59,15 @@
 			target = $(this).attr('src');
 			number = target.split('l')[2].split('.')[0]
 			console.log(target, number)
-			$("#imgdisplay").attr('src',`Images/Display/display${number}.jpeg`);
-			$("#imgdisplay").attr('alt',`Image #${number}`);
+			$("#imgdisplay").attr('src', `Images/Display/display${number}.jpeg`);
+			$("#imgdisplay").attr('alt', `Image #${number}`);
 		};
 		$(document).ready(function () {
 			for (i in [...Array(21).keys()]) {
 				var elem = document.createElement("img");
 				elem.src = `Images/Thumbnails/thumbnail${i}.jpeg`
 				elem.setAttribute("alt", "Flower");
+				elem.setAttribute("style", "padding:5px");
 				document.getElementById("gallery").appendChild(elem);
 			}
 
