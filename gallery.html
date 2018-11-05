@@ -55,10 +55,10 @@
 			$('#gallery img').on('click', display)
 		};
 		function display(e) {
-			console.log('inside the thing')
+			//console.log('inside the thing')
 			target = $(this).attr('src');
 			number = target.split('l')[2].split('.')[0]
-			console.log(target, number)
+			//console.log(target, number)
 			$("#imgdisplay").attr('src', `Images/Display/display${number}.jpeg`);
 			$("#imgdisplay").attr('alt', `Image #${number}`);
 		};
@@ -71,10 +71,10 @@
 				document.getElementById("gallery").appendChild(elem);
 			}
 
-			console.log('the document is ready')
+			//console.log('the document is ready')
 			gallery()
 
-			console.log('the document is also ready')
+			//console.log('the document is also ready')
 
 		})
 	</script>
