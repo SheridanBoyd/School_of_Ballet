@@ -117,8 +117,8 @@ body {
     height: 300px;
     
     position: relative;
-    left: calc(30% - 250px);
-    top: 90px;
+    left:10%;
+    top: 70px;
 }
 #word1, #word2, #word3 {
     position: relative;
@@ -126,8 +126,7 @@ body {
     left: 40%;
 	font-family: 'Lora', serif;
 	font-size: 50px;
-    color: #dddddd;
-    white-space: nowrap;
+	color: #dddddd
 }
 
 #valid  {
@@ -139,10 +138,10 @@ body {
 }
 
 #parallaxwork {
-    background-color: #000000;
-    /*background-image:url('Images/_stage.jpg');*/
+    background-color: #971313;
+    background-image:url('Images/_stage.jpg');
     background-size: 100% 500px;
-    height: 450px;
+    height: 500px;
     overflow: hidden;
 }
 
@@ -173,8 +172,4 @@ iframe {
     background-color: #000000;
     border-radius: 15px;
     height: 50px;
-}
-
-.logofoot {
-    height: 15px;
 }
